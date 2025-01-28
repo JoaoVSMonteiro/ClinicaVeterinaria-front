@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007bff !important;
+  padding: 15px;
+}
+
+.navbar .navbar-brand {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link:hover {
+  color: #e9ecef !important;
+}
+
+/* Centralização do conteúdo */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Formulário */
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Labels alinhadas */
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Botão */
+button[type='submit'] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+/* Footer corrigido */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  width: 100%;
+}

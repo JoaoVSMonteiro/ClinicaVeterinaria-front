@@ -1,19 +1,18 @@
-//cadastro pet
-const input = document.getElementById('form');
+//cadastro
+const form = document.getElementById('form');
 
-let cadastrados = [];
+let cadastrados = JSON.parse(localStorage.getItem('cadastrados')) || [];
 
-document.getElementById('form').addEventListener('submit', function (event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const nomeTutor = document.getElementById('nome-tutor').value;
-  const email = document.getElementById('email').value;
-
-  const nomePet = document.getElementById('nome-pet').value.trim;
-  const especie = document.getElementById('especie').value.trim;
-  const raca = document.getElementById('raca').value.trim;
-  const idade = document.getElementById('idade').value.trim;
-  const historicoPet = document.getElementById('historico-saude').value.trim;
+  const nomeTutor = document.getElementById('nomeTutor').value.trim();
+  const email = document.getElementById('emailTutor').value.trim();
+  const nomePet = document.getElementById('nomePet').value.trim();
+  const especie = document.getElementById('especie').value.trim();
+  const raca = document.getElementById('raca').value.trim();
+  const idade = document.getElementById('idade').value.trim();
+  const historicoPet = document.getElementById('historicoSaude').value.trim();
 
   if (
     !nomeTutor ||
@@ -24,7 +23,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     !idade ||
     !historicoPet
   ) {
-    alert('Por favor! preencha todos os campos antes de enviar!');
+    alert('Por favor, preencha todos os campos antes de enviar!');
     return;
   }
 
@@ -41,6 +40,10 @@ document.getElementById('form').addEventListener('submit', function (event) {
   };
 
   cadastrados.push(cadastrado);
+
+  localStorage.setItem('cadastrados', JSON.stringify(cadastrados));
+
   alert('Pet cadastrado com sucesso!');
+
   form.reset();
 });
