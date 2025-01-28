@@ -8,26 +8,24 @@ body {
   margin: 0;
 }
 
-/* Navbar */
 .navbar {
   background-color: #007bff !important;
   padding: 15px;
 }
 
 .navbar .navbar-brand {
-  color: #ffffff !important;
+  color: #ffffff;
   font-weight: bold;
 }
 
 .navbar .nav-link {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .navbar .nav-link:hover {
-  color: #e9ecef !important;
+  color: #e9ecef;
 }
 
-/* Centralização do conteúdo */
 .main-container {
   display: flex;
   flex-direction: column;
@@ -36,9 +34,16 @@ body {
   flex-grow: 1;
   padding: 40px 20px;
   min-height: 100vh;
+  text-align: center;
 }
 
-/* Formulário */
+h1 {
+  font-size: 2rem;
+  color: #212529;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 form {
   background-color: #ffffff;
   padding: 30px;
@@ -51,7 +56,6 @@ form {
   align-items: center;
 }
 
-/* Labels alinhadas */
 .form-group {
   width: 100%;
   margin-bottom: 15px;
@@ -64,13 +68,11 @@ form {
   margin-bottom: 5px;
 }
 
-/* Inputs */
 .form-control {
   border-radius: 5px;
   width: 100%;
 }
 
-/* Botão */
 button[type='submit'] {
   background-color: #007bff;
   border: none;
@@ -88,7 +90,6 @@ button[type='submit']:hover {
   background-color: #0056b3;
 }
 
-/* Footer corrigido */
 footer {
   background-color: #343a40;
   color: #fff;
