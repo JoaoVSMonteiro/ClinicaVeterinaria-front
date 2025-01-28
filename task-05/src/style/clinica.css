@@ -1,0 +1,23 @@
+.form-group-horario,
+.form-group-veterinarios {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group-horario p,
+.form-group-veterinarios p {
+  align-self: center;
+}
+
+.container-botoes {
+  align-self: center;
+}
+
+.form-group {
+  padding-bottom: 1rem;
+}
+
+.container-veterinarios-form {
+  display: flex;
+  flex-direction: column;
+}

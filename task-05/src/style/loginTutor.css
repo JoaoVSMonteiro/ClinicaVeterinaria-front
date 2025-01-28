@@ -69,10 +69,14 @@ form {
   gap: 15px;
 }
 
-footer {
-  background-color: #343a40;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  width: 100%;
+form .form-group label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+form .form-group input {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1;
 }

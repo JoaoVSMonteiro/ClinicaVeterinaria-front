@@ -10,8 +10,8 @@
       crossorigin="anonymous"
     />
     <title>Tutor</title>
-    <link rel="stylesheet" href="../style/index.css" />
-    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../style/clinica.css" />
+    <script type="module" src="../js/clinica.js" defer></script>
   </head>
   <body>
     <nav class="navbar bg-body-tertiary sticky-top">
@@ -87,41 +87,86 @@
         </div>
       </div>
     </nav>
+
     <section class="container mt-4">
-      <form id="form">
+      <form id="form-cad-clinica">
         <div class="form-group">
-          <label for="nome">Nome da clinica</label>
+          <label for="nome-clinica">Nome da clinica</label>
           <input
             type="text"
             class="form-control"
-            id="nome"
-            placeholder="Entre o nome..."
+            id="nome-clinica"
+            placeholder="Digite o nome da clinica"
           />
         </div>
+
         <div class="form-group">
           <label for="endereco">Endereço</label>
           <input
             type="text"
             class="form-control"
             id="endereco"
-            placeholder="endereco"
+            placeholder="Digite o endereço"
           />
         </div>
+
         <div class="form-group">
-          <label class="form-check-label" for="especialidades">Especialidades: </label>
+          <label for="especialidades">Especialidades: </label>
           <input type="text" class="form-control" id="especialidades" />
         </div>
-        <div class="form-group">
-          <label class="form-check-label" for="veterinarios">Veterinarios disponiveis: </label>
-          <input type="text" class="form-control" id="veterinarios" />
+
+        <div class="form-group form-group-horario">
+          <label for="horario-inicio">Horário de atendimento: </label>
+          <input
+            type="time"
+            class="form-control"
+            id="horario-inicio"
+            required
+          />
+          <p>-</p>
+          <input type="time" class="form-control" id="horario-fim" required />
         </div>
+
         <div class="form-group">
-          <label class="form-check-label" for="convenios">
-            Convenios aceitos:
-          </label>
-          <input type="text" class="form-control" id="convenios" />
+          <label for="convenios"> Convenios aceitos: </label>
+          <input type="text" class="form-control" id="convenios" required />
         </div>
-        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+
+        <hr />
+
+        <div class="container-veterinarios-form">
+          <p>Veterinarios disponiveis:</p>
+
+          <div id="input-area">
+            <div class="form-group form-group-veterinarios">
+              <label class="form-check-label" for="veterinarios">Nome: </label>
+              <input type="text" class="form-control" id="veterinarios" />
+              <label class="form-check-label" for="horario-consulta"
+                >Horário Consulta:
+              </label>
+              <input
+                type="time"
+                class="form-control"
+                id="horario-consulta"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="container-botoes">
+            <button
+              type="button"
+              id="btn-add-veterinario"
+              class="btn btn-primary mt-4 mb-2"
+            >
+              Adicionar Novo Veterinário
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-4">
+          Cadastrar Clinica
+        </button>
       </form>
     </section>
 

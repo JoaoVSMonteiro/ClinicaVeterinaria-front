@@ -1,49 +1,18 @@
-//cadastro
-const form = document.getElementById('form');
+const form = document.getElementById('cadastro-form');
 
-let cadastrados = JSON.parse(localStorage.getItem('cadastrados')) || [];
-
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const nomeTutor = document.getElementById('nomeTutor').value.trim();
-  const email = document.getElementById('emailTutor').value.trim();
-  const nomePet = document.getElementById('nomePet').value.trim();
-  const especie = document.getElementById('especie').value.trim();
-  const raca = document.getElementById('raca').value.trim();
-  const idade = document.getElementById('idade').value.trim();
-  const historicoPet = document.getElementById('historicoSaude').value.trim();
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+  const senha = document.getElementById('senha').value;
 
-  if (
-    !nomeTutor ||
-    !email ||
-    !nomePet ||
-    !especie ||
-    !raca ||
-    !idade ||
-    !historicoPet
-  ) {
-    alert('Por favor, preencha todos os campos antes de enviar!');
-    return;
-  }
+  const tutor = { nome, email, senha };
 
-  const cadastrado = {
-    nomeTutor: nomeTutor,
-    email: email,
-    pet: {
-      nome: nomePet,
-      especie: especie,
-      raca: raca,
-      idade: idade,
-      historicoPet: historicoPet,
-    },
-  };
+  let tutores = JSON.parse(localStorage.getItem('tutores')) || [];
+  tutores.push(tutor);
+  localStorage.setItem('tutores', JSON.stringify(tutores));
 
-  cadastrados.push(cadastrado);
-
-  localStorage.setItem('cadastrados', JSON.stringify(cadastrados));
-
-  alert('Pet cadastrado com sucesso!');
-
+  alert('Cadastro realizado com sucesso!');
   form.reset();
 });
